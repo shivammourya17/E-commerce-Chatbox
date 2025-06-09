@@ -145,14 +145,14 @@ const ChatBot = () => {
                     transition={{ duration: 0.4, type: "spring" }}
                   >
                     <div className="aspect-w-16 aspect-h-10 bg-gray-100">
-                      <img
+                      <a href={`/products/product/${product.id}`}><img
                         src={product.thumbnail}
                         alt={product.title}
                         className="object-cover w-full h-full"
-                      />
+                      /></a>
                     </div>
                     <div className="flex-1 flex flex-col p-4">
-                      <h2 className="text-lg font-semibold text-gray-900">{product.title}</h2>
+                      <a href={`/products/product/${product.id}`}><h2 className="text-lg font-semibold text-gray-900">{product.title}</h2></a>
                       <p className="text-gray-600 mt-1 flex-1">{product.description}</p>
                       <div className="mt-4 flex items-center justify-between">
                         <span className="text-xl font-bold text-blue-600">${product.price}</span>
