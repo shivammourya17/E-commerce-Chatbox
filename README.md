@@ -63,9 +63,6 @@ git clone https://github.com/CodeFusionEhsan/Chatbot.git
 cd Chatbot
 
 2. Backend Setup (Django)
-bash
-Copy
-Edit
 cd backend
 python -m venv env
 source env/bin/activate    # On Windows: env\Scripts\activate
@@ -75,9 +72,6 @@ python manage.py runserver
 ⚠️ Make sure Python 3 is installed and available in your system.
 
 3. Frontend Setup (Next.js)
-bash
-Copy
-Edit
 cd ../frontend
 npm install
 npm run dev
