@@ -1,63 +1,122 @@
+# 🛒 E-Commerce Sales Chatbot
 
-# AI Chatbot
+An AI-powered chatbot for handling customer queries in an e-commerce setting. This is a basic proof-of-concept chatbot that can assist users with requests like:
 
-## Installation
+- “Show me mobiles”
+- “I want to buy mobiles”
+- “Show Samsung phones”
 
-1. Clone the repository:
-```
+It uses **Regex-based query parsing** to understand user input and fetch relevant product data from a Django backend. Built with a modern tech stack including **Next.js**, **Tailwind CSS**, **Clerk Authentication**, and more, the system is designed for scalability and easy customization.
+
+---
+
+## 🧠 Features
+
+- Basic query recognition using **regular expressions**
+- Fetches and returns product data relevant to the user's request
+- Built-in authentication system using **Clerk**
+- Clean and animated UI using **Tailwind CSS** and **Framer Motion**
+- Easily extendable to include more complex query handling or AI/NLP-based features
+
+---
+
+## 🛠️ Tech Stack
+
+### 🔹 Frontend
+
+- **Next.js** with **App Router**
+- **Turbopack** (for blazing-fast bundling)
+- **Tailwind CSS** (for styling)
+- **Framer Motion** (for animations)
+- **Lucide-react** (for icons)
+- **ESLint** (for code quality)
+- **Clerk** (for authentication)
+
+### 🔹 Backend
+
+- **Python 3**
+- **Django**
+- **SQLite** (for lightweight DB needs)
+- **Regex** (for pattern-based query parsing)
+
+---
+
+## 📁 Project Structure
+
+Chatbot/
+│
+├── backend/ # Django backend
+│ └── ...
+│
+├── frontend/ # Next.js frontend
+│ └── ...
+
+
+---
+
+## 🚀 Getting Started (Local Setup)
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/CodeFusionEhsan/Chatbot.git
-```
-2. Navigate to the project directory:
-```
 cd Chatbot
-```
-3. Install the required dependencies:
-```
+
+2. Backend Setup (Django)
+bash
+Copy
+Edit
+cd backend
+python -m venv env
+source env/bin/activate    # On Windows: env\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+⚠️ Make sure Python 3 is installed and available in your system.
+
+3. Frontend Setup (Next.js)
+bash
+Copy
+Edit
+cd ../frontend
 npm install
-```
-4. Start the development server:
-```
 npm run dev
-```
+⚠️ Ensure Node.js (18+) and npm are installed.
 
-## Usage
+💬 How It Works
+The chatbot interface accepts user input via a chatbox.
 
-The application provides an AI-powered chatbot that can assist users with product searches and recommendations. Users can interact with the chatbot by clicking the chat icon in the bottom right corner of the screen.
+Queries are parsed using Regex to extract relevant product intents (e.g., looking for a specific brand or category).
 
-The chatbot supports the following features:
+Based on the matched pattern, the frontend sends a request to the Django API.
 
-- Greeting and farewell messages
-- Product search by brand, model, or price range
-- Displaying a list of relevant products based on the user's query
+Django filters the database (SQLite) for matching products and sends back the result.
 
-## API
+The frontend dynamically displays the product list in a clean UI.
 
-The backend of the application is built using Django and provides the following API endpoints:
+The logic can be enhanced with:
 
-- `POST /getProducts/`: Fetches a list of products based on the provided limit parameter.
-- `POST /getProduct`: Fetches details of a specific product based on the provided product ID.
-- `POST /chat`: Processes the user's chat input and returns a response or a list of relevant products.
+Advanced NLP/NLU libraries (e.g., spaCy, transformers)
 
-## Contributing
+A vector database for semantic search
 
-If you would like to contribute to the project, please follow these steps:
+ChatGPT-like AI integrations for better flexibility
 
-1. Fork the repository
-2. Create a new branch for your feature or bug fix
-3. Make your changes and commit them
-4. Push your changes to your forked repository
-5. Submit a pull request to the main repository
+📌 Future Improvements
+Add product recommendation engine
 
-## License
+Enhance intent recognition using NLP
 
-This project is licensed under the [MIT License](LICENSE).
+Real-time chat experience with WebSocket
 
-## Testing
+Admin dashboard for managing products
 
-To run the tests for the application, use the following command:
+👨‍💻 Author
 
-```
-npm run test
-```
+Ehsan Saleem
 
-This will execute the test suite and report the results.
+💼 LinkedIn: https://linkedin.com/in/ehsan-saleem-web3
+
+🛠️ GitHub: https://github.com/CodeFusionEhsan
+
+📧 Email: web3.ehsan@gmail.com
