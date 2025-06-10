@@ -102,7 +102,7 @@ def chat(request):
 
         # Regex For Identifying User Queries
 
-        smartphone_query_regex = r"\b(smartphone|smartphones|mobile|mobiles|phone|phones|cellphone|cellphones|android|apple|iphone|iphones|samsung|oneplus|xiaomi|oppo|vivo|realme|pixel|nokia|motorola)\b"
+        smartphone_query_regex = r"\b(smartphone|product|products|smartphones|mobile|mobiles|phone|phones|cellphone|cellphones|android|apple|iphone|iphones|samsung|oneplus|xiaomi|oppo|vivo|realme|pixel|nokia|motorola)\b"
         price_regex = r"(?:under|below|less than|upto|up to|for|price (?:is|of|at)?|cost(?:s)?(?: is| of| at)?|$|dollars\.?|inr)?\s*([₹₹]?\s?\d{1,3}(?:[,\d{3}]*)(?:k|K|lakh|Lakh)?)(?=\b|$)"
         model_regex = r"\b(?:iphone|samsung|oneplus|xiaomi|oppo|vivo|realme|pixel|nokia|motorola)\s*[\w\d\- ]+\b"
         greeting_regex = r"/(^|\s)(h(ello|i|ey|ola)|greetings|good\s(morning|afternoon|evening|day)|sup|yo)(\s|$|[!\?\.])/i"
