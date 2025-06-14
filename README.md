@@ -77,5 +77,13 @@ git add README.md
 git commit -m "Added full project README"
 git push origin main
 
+Shivam Mourya
+
+💼 LinkedIn: https://www.linkedin.com/in/shivam-mourya-57803824a/
+
+🛠️ GitHub: https://github.com/shivammourya17
+
+📧 Email: shivammourya1704@gmail.com make this changes 
+
 
 
